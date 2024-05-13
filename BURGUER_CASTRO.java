@@ -17,7 +17,7 @@ public class Usuario{
 
 //-------------------------------------------------
 
-public class Administrador{
+public class Administrador extends Usuario{
 	
 	public Administrador(){
 	}
@@ -29,7 +29,7 @@ public class Administrador{
 
 //-------------------------------------------------
 
-public class Empleado{
+public class Empleado extends Usuario{
 	
 	private String puesto;
 	private double sueldo;
@@ -45,13 +45,14 @@ public class Empleado{
 
 //--------------------------------------------------
 
-public class Cliente(){
+public class Cliente() extends Usuario{
 	
 	private int puntos;
+	private List<Compra> compras;
 	
 	public Cliente(){
 		
-		List<Compra> lista = new List<Compra>();
+		this.compras = new List<Compra>();
 	}
 	
 	
